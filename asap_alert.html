@@ -12,24 +12,16 @@
 			var req = new XMLHttpRequest();
 			var i = 1;
 			req.open("GET", "http://nanaserver/users/shimamoto/asap.php");
-			//req.open("GET", "http://nanaserver/users/shimamoto/asap.php", false, "admin", "");
-			
-			//req.setRequestHeader("Cookie", "myname3=admin");
-			//req.setRequestHeader("Cookie", "myname=admin");
-			
-			//req.setRequestHeader("Access-Control-Allow-Origin", "nanaserver");
 			
 			req.onreadystatechange = function(){
-				if(req.readyState == 4 & req.status == 200){
+				if(req.readyState == 4 && req.status == 200){
 					var result = req.responseText;
 					
-					//document.getElementById("asap_num").textContent = result;
-					document.getElementById("asap_num").textContent = "aaa";
+					document.getElementById("asap_num").textContent = result;
 				}
 			}
 			
 			req.send();
-
 		}
 	</script>
 </head>
