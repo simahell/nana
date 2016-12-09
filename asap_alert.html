@@ -10,13 +10,11 @@
 		
 		function reload(){
 			var req = new XMLHttpRequest();
-			var i = 1;
 			req.open("GET", "http://nanaserver/users/shimamoto/asap.php");
 			
 			req.onreadystatechange = function(){
 				if(req.readyState == 4 && req.status == 200){
 					var result = req.responseText;
-					
 					document.getElementById("asap_num").textContent = result;
 				}
 			}
@@ -26,6 +24,6 @@
 	</script>
 </head>
 <body onload="setFunc()">
-	<h3>asapは <div id="asap_num">100</div> 個です</h3>
+	<h3>asapは <div id="asap_num">loading...</div> 個です</h3>
 </body>
 </html>
